@@ -2,6 +2,12 @@ import fetch from "node-fetch";
 
 const jsonTypicode = "https://jsonplaceholder.typicode.com/todos/1";
 
+// Random Cats API
+const randomCats = "https://api.thecatapi.com/v1/images/search?limit=10";
+
+// Google page API
+const googlePage = "https://www.google.com/";
+
 // const fetchData = (apiEndPoint) => {
 //   fetch(apiEndPoint)
 //     .then((response) => response.json())
@@ -13,7 +19,7 @@ const jsonTypicode = "https://jsonplaceholder.typicode.com/todos/1";
 const fetchData = async (apiEndPoint) => {
   try {
     const res = await fetch(apiEndPoint);
-    const data = await res.json();
+    const data = await res.text();
     console.log(data);
 
   } catch (error) {
@@ -22,4 +28,9 @@ const fetchData = async (apiEndPoint) => {
   }
 }
 
-fetchData(jsonTypicode);
+//fetchData(jsonTypicode);
+
+//fetchData(randomCats);
+
+fetchData(googlePage);
+
