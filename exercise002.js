@@ -19,7 +19,7 @@ const googlePage = "https://www.google.com/";
 const fetchData = async (apiEndPoint) => {
   try {
     const res = await fetch(apiEndPoint);
-    const data = await res.text();
+    const data = await res.json();
     console.log(data);
 
   } catch (error) {
@@ -28,9 +28,9 @@ const fetchData = async (apiEndPoint) => {
   }
 }
 
-//fetchData(jsonTypicode);
+fetchData(jsonTypicode);
 
-//fetchData(randomCats);
+fetchData(randomCats);
 
-fetchData(googlePage);
+// fetchData(googlePage);
 
