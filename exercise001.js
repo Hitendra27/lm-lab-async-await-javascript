@@ -23,8 +23,8 @@ const getPromiseResponse = async () => {
 	const result = await promise;
 	console.log(`Yay! Promise resolved with response: ${result}`);
 
-	} catch (reject) {
-	console.log(`Boo. Promise rejected with response: ${reject}`);
+	} catch (error) {
+	console.log(`Boo. Promise rejected with response: ${error}`);
 	}
 }
 
