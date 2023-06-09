@@ -19,7 +19,7 @@ const googlePage = "https://www.google.com/";
 const fetchData = async (apiEndPoint) => {
   try {
     const res = await fetch(apiEndPoint);
-    const data = await res.json();
+    const data = await res.json(); // res.write for google API.
     console.log(data);
 
   } catch (error) {
